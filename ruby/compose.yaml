@@ -1,0 +1,10 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: ruby-dev-docker-image:latest
+        container_name: ruby-dev-container
+        volumes:
+            - .:/app
+        tty: true
