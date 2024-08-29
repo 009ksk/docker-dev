@@ -1,0 +1,10 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: nodejs-dev-docker-image:latest
+        container_name: nodejs-dev-container
+        volumes:
+            - .:/apps
+        tty: true
