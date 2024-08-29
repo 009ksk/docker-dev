@@ -1,0 +1,12 @@
+services:
+    app:
+        container_name: cpp-dev-contaienr
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: cpp-dev-docker-image:latest
+        volumes:
+            - .:/app
+        stdin_open: true #標準入力をコンテナと紐付ける
+        tty: true
+
